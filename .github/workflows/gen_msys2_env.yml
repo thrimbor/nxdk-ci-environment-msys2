@@ -16,7 +16,7 @@ jobs:
       run: |
         choco install msys2 --no-progress
         C:\tools\msys64\usr\bin\bash -eo pipefail -lc "\
-        pacman --needed --noconfirm -S git make cmake pkgconf bison flex mingw-w64-x86_64-{llvm,clang,lld} && \
+        pacman --needed --noconfirm -S cargo git make cmake pkgconf bison flex mingw-w64-x86_64-{llvm,clang,lld} && \
         pacman -Scc --noconfirm \
         "
     - name: Compress MSYS2 Environment
